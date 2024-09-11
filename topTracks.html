@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleTracks.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul class="nav-contenedor">
+            <li class="user-info">
+                <img id="user-image" src="" alt="User Image">
+                <span id="user-name"></span>
+            </li>
+            <div>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="logout"><a href="#" id="logout-btn">Log Out</a></li>
+            </div>
+        </ul>
+        
+    </nav>
+
+    
+
+    <div id="controls">
+      <div class="contenedor">
+        <div class="contenedor-modificar">
+            <div class="card">
+                <div class="card-header">
+                    <h2 id="metric-title">Top Tracks</h2>
+                    
+                </div>
+                <div class="tracks-container">
+                    <div class="card-body" id="top-tracks">                         
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+      
+      
+      
+      
+        <div class="padre-periododetiempo-contenedor">
+            <div class="metrica-contenedor">
+             
+                <div class="metrica-contenedor-barra">
+                    <h2>Métrica</h2>
+                    <select  id="top-select" style="width: 300px;" onchange="setType(this.value)">
+                        <option value="tracks">Top Tracks</option>
+                        <option value="artists">Top Artistas</option>
+                    </select>
+                </div>
+                
+            </div>
+            <div class="periododetiempo-contenedor">
+                <h2>Periodo de tiempo</h2>
+                <div class="periodo-bonotes">
+                    <div class="periodo-botones-contenedor">
+                        <h3>Último Mes</h3>
+                        <p>Revisa las estadisticas del ultimo mes</p>
+                        <button class="periodo-boton" onclick="setTimeFrame('short_term')">Ver mas</button>
+                    </div>
+                    <div class="periodo-botones-contenedor">
+                        <h3>Últimos 6 Mes</h3>
+                        <p>Revisa las estadisticas del ultimos 6 mes</p>
+                        <button class="periodo-boton" onclick="setTimeFrame('medium_term')">Ver mas</button>
+                    </div>
+                    <div class="periodo-botones-contenedor">
+                        <h3>Último Año</h3>
+                        <p>Revisa las estadisticas del ultimo Año</p>
+                        <button class="periodo-boton" onclick="setTimeFrame('long_term')">Ver mas</button>
+                    </div>
+            
+                </div>
+               
+                    <button  class="botonguardar" id="save-playlist">guardar playlist</button>
+             
+            
+        
+               
+            </div>
+            <div class="playlist-container" id="playlist-cont"> </div>
+        </div>
+
+
+      </div>
+    </div>
+    <script src="js/toptracks.js"></script>
+</body>
+</html>
